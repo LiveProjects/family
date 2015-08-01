@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>作业</title>
+    <title>Hisense</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="tools/bootstrap/dist/css/bootstrap.css" />
@@ -70,7 +70,7 @@
 
 
 
-    <div ng-view=""></div>
+    <div class="page {{pageClass}}" ng-view=""></div>
 
 
 
@@ -100,6 +100,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/bus.js"></script>
 
     <!-- directive -->
     <script src="scripts/directives/main/main-top.js"></script>
@@ -113,8 +114,12 @@
     <script src="scripts/directives/main/main-right-search.js"></script>
     <script src="scripts/directives/main/main-right-bus.js"></script>
 
+    <script src="scripts/directives/bus/book-bus.js"></script>
+    <script src="scripts/directives/bus/management-bus.js"></script>
+
 
     <!-- service-->
+    <script src="scripts/services/common-XHRData.js"></script>
         
         <!-- endbuild -->
 </body>
