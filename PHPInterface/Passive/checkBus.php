@@ -1,5 +1,5 @@
 <?php
-require 'dbaccess.php';
+require '../dbaccess.php';
 header ( 'content-type:text/html;charset=utf-8' );
 $openid = "0002";
 $db = new DB ();

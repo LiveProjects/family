@@ -1,5 +1,5 @@
 <?php
-	require 'dbaccess.php';
+	require '../dbaccess.php';
 	//error_reporting(0);
 	$DB=new DB();
 	
