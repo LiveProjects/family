@@ -31,7 +31,7 @@ angular.module('Hisense')
             });
         };*/
         /*获取工厂名*/
-        commonDatas.getfactoryhttp=function(successcallback,errorcallback){
+        commonDatas.getfactoryhttp=function(val,successcallback,errorcallback){
             $http({
                 method:'POST',
                 url:'PHPInterface/Asnyc/ForBookbusAsnyc.php',
@@ -39,7 +39,7 @@ angular.module('Hisense')
                 headers: {
                     'Content-Type':'application/x-www-form-urlencoded'
                 },
-                params : {'firstname':'lio'}
+                params : {'firstname':val}
             }).success(function(data,status,headers,config){
                 var oo=JSON.stringify(data);
                 /*console.log(oo);
@@ -144,13 +144,35 @@ angular.module('Hisense')
                 method:'POST',
                 url:'PHPInterface/Asnyc/book_commit.php',
                 data:{},
-                params:{'name':val[0]},
+                params:{
+                    'name_employee':val[0],
+                    'FRTime':val[1],
+                    'FRDate':val[2],
+                    'FStop':val[3]
+                },
                 headers:{
                     'Content-Type':'application/x-www-form-urlencoded'
                 }
             }).success(function(data){
                 successcallback(data);
             }).error(function(data){
+                errorcallback(data);
+            })
+        };
+
+        /*员工姓名模糊查询*/
+        commonDatas.modelname=function(val,successcallback,errorcallback){
+            $http({
+                method:'POST',
+                url:'',
+                data:{},
+                params:{},
+                headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'
+                }
+            }).success(function(data){
+                successcallback(data);
+            }).error(function (data) {
                 errorcallback(data);
             })
         };

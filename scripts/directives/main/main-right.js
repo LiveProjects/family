@@ -25,7 +25,7 @@ angular.module('Hisense')
                     console.log($location.hash());*/
                 };
                 scope.managebus=function(){//注意alert禁用，引起不必要的烦心
-                    $location.path('bus/false');
+                    $location.path('managebus');
 
                 }
 

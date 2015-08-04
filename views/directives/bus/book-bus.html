@@ -1,6 +1,6 @@
 <div id="bookbus" class="container-fluid" ng-show="case">
-    <h2>{{intro}}{{case}}</h2>
-    <div class="col-md-4 col-md-offset-4">
+    <h2 class="col-md-2 col-md-offset-1">{{intro}}{{case}}</h2>
+    <div class="col-md-4 col-md-offset-1">
         <div id="1">
             <label for=""><input type="text" placeholder="请输入姓名"/></label>
             <ul>
@@ -9,38 +9,35 @@
                 <li>3</li>
                 <li>4</li>
             </ul>
-            <input type="text" placeholder="工厂名自动填充" disabled/>
+            <!--<input type="text" placeholder="工厂名自动填充" value="{{facval}}" disabled/>-->
+            <input type="text" placeholder="工厂名自动填充" value="{{facval}}" disabled/>
         </div>
         <div id="2">
             <label for=""><input type="text" placeholder="选择加班日期"/></label>
             <ul>
-                <li>2:00</li>
-                <li>2:00</li>
-                <li>2:00</li>
-                <li>2:00</li>
+                <li>2015-8-5</li>
+                <li>2015-8-6</li>
+                <li>2015-8-7</li>
+                <li>2015-8-8</li>
+                <li>2015-8-9</li>
             </ul>
         </div>
         <div id="3">
             <label for=""><input type="text" placeholder="选择加班时间"/></label>
-            <ul>
-                <li>2:00</li>
-                <li>2:00</li>
-                <li>2:00</li>
-                <li>2:00</li>
-            </ul>
+            <ul></ul>
         </div>
         <div id="4">
             <label for=""><input type="text" placeholder="选择下车地点"/></label>
             <ul>
-                <li>回家</li>
-                <li>回家</li>
-                <li>回家</li>
-                <li>回家</li>
             </ul>
         </div>
-        <div>
-            <button class="btn btn-info">确认预约</button>
+        <div id="5">
+            <button class="btn  btn-success" ng-click="bbus()">确认预约</button>
             <button class="btn btn-danger" ng-click="manbus()">{{a}}</button>
         </div>
+    </div>
+
+    <div id="spotpa" class="col-md-4" style="height: auto;background-color: #ffffff;display: none;margin-top: 200px;">
+        <ul id="spot"></ul>
     </div>
 </div>
