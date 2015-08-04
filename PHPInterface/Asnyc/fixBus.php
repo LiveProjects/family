@@ -1,5 +1,5 @@
 <?php
-require 'dbaccess.php';
+require '../dbaccess.php';
 /**
  * *****************预约修改******************
  */

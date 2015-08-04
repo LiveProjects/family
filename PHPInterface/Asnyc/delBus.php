@@ -1,5 +1,5 @@
 <?php
-require 'dbaccess.php';
+require '../dbaccess.php';
 $db = new DB ();
 /**
  * *****************预约删除******************

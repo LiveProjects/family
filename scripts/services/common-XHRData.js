@@ -5,7 +5,7 @@ angular.module('Hisense')
 .service('commonDatas',['$http',function($http){
         commonDatas={};
 
-        commonDatas.getfactory= function (username,successcallback,errorcallback) {
+        /*commonDatas.getfactoryhttp= function (successcallback,errorcallback) {
             if(sessionStorage.getItem('name')){
                 commonDatas.username=sessionStorage.getItem('name');
             }else{
@@ -13,40 +13,144 @@ angular.module('Hisense')
             }
 
             $.ajax({
-                url: apiServerAddress+'/auth',
+                url: 'PHPInterface/Asnyc/ForBookbusAsnyc.php',
                 async: true,
                 type: 'POST',
-                data: loginDataString,
+                data: {'firstname':'lio'},
                 beforeSend: function (xhr, settings) {
                     xhr.setRequestHeader('Content-Type', 'application/json');
-                    xhr.setRequestHeader('Authorization', userToken);
                 }
             }).done(function (data) {
-                $sessionStorage.com_dalockr_dev  = {
-                    clusterId : data.clusterId,
-                    username : data.username,
-                    userid : data.userid,
-                    isAuthorization : true
-                };
-                successCallback(data);
-
-            }).fail(function (data) {
-                errorCallback(data);
-            });
-        };
-        commonDatas.getfactoryhttp=function(successcallback,errorcallback){
-            $http({
-                method:'GET',
-                url:'PHPInterface/Asnyc/ForBookbusAsnyc.php',
-                data:{'firstname':'lio'}
-            }).success(function(data,status,headers,config){
                 var oo=JSON.stringify(data);
                 console.log(oo);
                 console.log(data[0]['FName']);
                 successcallback(data);
 
+            }).fail(function (data) {
+                errorCallback(data);
+            });
+        };*/
+        /*获取工厂名*/
+        commonDatas.getfactoryhttp=function(successcallback,errorcallback){
+            $http({
+                method:'POST',
+                url:'PHPInterface/Asnyc/ForBookbusAsnyc.php',
+                data:{'firstname':'lio'},
+                headers: {
+                    'Content-Type':'application/x-www-form-urlencoded'
+                },
+                params : {'firstname':'lio'}
+            }).success(function(data,status,headers,config){
+                var oo=JSON.stringify(data);
+                /*console.log(oo);
+                console.log(data[0]['FName']);*/
+                successcallback(data);
+
             }).error(function(data,status,headers,config){
                 console.log("error");
+                errorcallback(data);
+            })
+        };
+
+        /*commonDatas.getfactoryhttp=function(successcallback,errorcallback){
+             $http.post('PHPInterface/Asnyc/ForBookbusAsnyc.php',{
+                 'firstname':'lio'
+             }).success(function(data){
+                 console.log(123);
+                 console.log(data);
+                 successcallback(data);
+             }).error(function(error){
+                 errorcallback(error);
+             });
+        };*/
+
+        /*返回bus基本预加载数据*/
+        commonDatas.getbusData=function(successcallback,errorcallback){
+            $http({
+                method:'POST',
+                url:'PHPInterface/Passive/json.php',
+                data:{'firstname':'lio'},
+                headers: {
+                    'Content-Type':'application/x-www-form-urlencoded'
+                }
+            }).success(function(data,status,headers,config){
+                /*var oo=JSON.stringify(data);
+                console.log(oo);*/
+                successcallback(data);
+            }).error(function(data,status,headers,config){
+                /*console.log("error");*/
+                errorcallback(data);
+            })
+        };
+        /*预约查看*/
+        commonDatas.getcheckMan= function (successcallback, errorcallback) {
+            $http({
+                method:'POST',
+                url:'PHPInterface/Passive/checkBus.php',
+                data:{'firstname':'lio'},
+                headers: {
+                    'Content-Type':'application/x-www-form-urlencoded'
+                }
+            }).success(function(data,status,headers,config){
+                /*var oo=JSON.stringify(data);
+                 console.log(oo);*/
+                successcallback(data);
+            }).error(function(data,status,headers,config){
+                /*console.log("error");*/
+                errorcallback(data);
+            })
+        };
+
+        /*删除预约*/
+        commonDatas.delbus=function(name,FRDate,successcallback,errorcallback){
+            $http({
+                method:'POST',
+                url:'PHPInterface/Asnyc/delBus.php',
+                data:{},
+                params:{'name':name,'FRDate':FRDate},
+                headers: {
+                    'Content-Type':'application/x-www-form-urlencoded'
+                }
+            }).success(function(data,status,headers,config){
+                /*var oo=JSON.stringify(data);
+                 console.log(oo);*/
+                successcallback(data);
+            }).error(function(data,status,headers,config){
+                /*console.log("error");*/
+                errorcallback(data);
+            })
+        };
+
+        /*修改预约*/
+        commonDatas.fixBus= function (val, successcallback, errorcallback) {
+            $http({
+                method:'POST',
+                url:'PHPInterface/Asnyc/fixBus.php',
+                data:{},
+                params:{'name':val[0]},//索引出其具体指传进来的数组，待修改...
+                headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'
+                }
+            }).success(function(data){
+                successcallback(data);
+            }).error(function(data){
+                errorcallback(data);
+            })
+        };
+
+        /*提交预订*/
+        commonDatas.bookbus=function(val, successcallback, errorcallback){
+            $http({
+                method:'POST',
+                url:'PHPInterface/Asnyc/book_commit.php',
+                data:{},
+                params:{'name':val[0]},
+                headers:{
+                    'Content-Type':'application/x-www-form-urlencoded'
+                }
+            }).success(function(data){
+                successcallback(data);
+            }).error(function(data){
                 errorcallback(data);
             })
         };

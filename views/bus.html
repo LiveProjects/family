@@ -1,4 +1,8 @@
-<div>
-    <book-bus></book-bus>
-    <management-bus></management-bus>
+<div style="position: relative" id="wrapbus">
+    <div ng-show="back()" id="bookb"><!--{{which}}-->
+        <book-bus case="which"></book-bus>
+    </div>
+    <div ng-show="back()" id="managementb"><!--{{which}}-->
+        <management-bus case="which"></management-bus>
+    </div>
 </div>

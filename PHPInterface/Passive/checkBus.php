@@ -36,7 +36,7 @@ $from = date ( 'Y-m-d', $currentdate ) . " 00:00:00"; // 查询的起始日期
 /**
  * ****************预约查看*********************
  */
-$name_emp = $_GET['name'];
+/*$name_emp = $_GET['name'];*/
 // echo $name_emp;
 // $name_emp='lio';
 // 联合查询出职员编码$res_com['id_emp']和其所在公司名称$res_com['name_com']

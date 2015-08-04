@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body ng-app="Hisense">
-    <nav class="navbar navbar-default navbar-inverse">
+    <nav class="navbar navbar-default navbar-inverse" style="border-radius: 0; margin-bottom: 0">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -69,8 +69,10 @@
 
 
 
+    <!--//动画-->
+    <!--<div class="page {{pageClass}}" ng-view=""></div>-->
 
-    <div class="page {{pageClass}}" ng-view=""></div>
+    <div class="page" ng-view=""></div>
 
 
 
@@ -120,6 +122,7 @@
 
     <!-- service-->
     <script src="scripts/services/common-XHRData.js"></script>
+    <script src="scripts/services/route-services.js"></script>
         
         <!-- endbuild -->
 </body>

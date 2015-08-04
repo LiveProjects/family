@@ -13,10 +13,10 @@ app.config(['$routeProvider',function($routeProvider){
             templateUrl:'views/main.html',
             controller:'MainCtrl'
         })
-        .when('/bus',{
+        .when('/bus/:which',{
             templateUrl:'views/bus.html',
             controller:'busCtrl'
-        })
+        });
         /*.otherwise({
             redirection:'/'
         })*/
