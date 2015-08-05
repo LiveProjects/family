@@ -358,15 +358,29 @@
         min-height: 260px;
         background-color: #60c0c5;
         margin-bottom: 20px;
+        -webkit-transition: ease-out 0.3s;
+        -moz-transition: ease-out 0.3s;
+        -ms-transition: ease-out 0.3s;
+        -o-transition: ease-out 0.3s;
+        transition: ease-out 0.3s;
         >div{
-          min-height: 40px;
+          min-height: 36px;
           width: 100%;
           label{
-            line-height: 44px;
+            line-height: 36px;
             margin-left: 20px;
-            font-size: 1.6rem;
-            min-width: 90px;
+            font-size: 2rem;
+            min-width: 110px;
             text-align: right;
+          }
+          input{
+            background-color: #60c0c5;
+            border: none;
+            color: white;
+            font-weight: bolder;
+            font-size: 2rem;
+            text-indent: 10px;
+            outline-color: #a94442;
           }
         }
         >div:first-child{
@@ -384,7 +398,7 @@
           }
         }
         >div:last-child{
-          margin-top: 20px;
+          margin-top: 14px;
           button{
             width: 20%;
             margin-left: 20%;

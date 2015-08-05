@@ -2,6 +2,37 @@
     <h2>{{intro}}</h2>
     <div class="col-md-8 col-md-offset-2">
         <ol id="checkmainbody">
+            <li ng-repeat="item in checkData">
+                <div>
+                    <label for="">加班日期:</label>
+                    <input type="text" placeholder="加班日期" value="{{item.FRDate}}" disabled/>
+                </div>
+
+                <div>
+                    <label for="">姓名:</label>
+                    <input type="text" placeholder="姓名" value="{{name_emp}}" disabled/>
+                    <label for="">加班时间:</label>
+                    <input type="text" placeholder="加班时间" value="{{item.FRTime}}" disabled/>
+                </div>
+                <div>
+                    <label for="">下车地点:</label>
+                    <input type="text" placeholder="下车地点" value="{{item.FStop}}" disabled/>
+                </div>
+                <div>
+                    <label for="">所在公司:</label>
+                    <input type="text" placeholder="所在公司" value="{{name_com}}" disabled/>
+                </div>
+                <div>
+                    <label for="">提报人姓名:</label>
+                    <input type="text" placeholder="提报人姓名" value="{{item.book_name}}" disabled/>
+                    <label for="">提报时间:</label>
+                    <input type="text" placeholder="提报时间" value="2015-8-8" disabled/>
+                </div>
+                <div>
+                    <button class='btn btn-danger' ng-click='delbus($index)'>删除</button>
+                    <button class='btn btn-success' ng-click='fixbus($index)'>修改</button>
+                </div>
+            </li>
 
         </ol>
     </div>
