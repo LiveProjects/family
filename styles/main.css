@@ -190,7 +190,7 @@
 #bookbus > div {
   background-color: #60c0c5 ;
   border-radius: 8px;
-  height: 88%;
+  /*height: 88%;*/
   position: relative;
   -webkit-transition: ease-out 0.3s;
   -moz-transition: ease-out 0.3s;
@@ -198,6 +198,7 @@
   -o-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
   margin-bottom: 10px;
+  padding-bottom: 100px;
 }
 #bookbus > div > div:first-child {
   position: relative;
@@ -288,11 +289,12 @@
   overflow: hidden;
   position: absolute;
   bottom: 26px;
+  width: 100%;
 }
 #bookbus > div > div:last-child button {
-  float: left;
+  /*margin-left: 30px;*/
   margin-right: 30px;
-  margin-left: 20px;
+  float: right;
 }
 #bookbus > div > ul {
   width: 96%;
@@ -324,8 +326,8 @@
   transition: ease-out 0.2s;
 }
 #managementbus {
-  width: 100%;
   overflow: hidden;
+  padding: 0;
 }
 #managementbus h2 {
   width: 100%;
@@ -336,6 +338,49 @@
   background-color: #337ab7;
   color: #ffffff;
   margin-top: 0;
+  padding: 0;
+}
+#managementbus > div > ol {
+  width: 100%;
+}
+#managementbus > div > ol li {
+  list-style: none;
+  width: 100%;
+  min-height: 260px;
+  background-color: #60c0c5;
+  margin-bottom: 20px;
+}
+#managementbus > div > ol li > div {
+  min-height: 40px;
+  width: 100%;
+}
+#managementbus > div > ol li > div label {
+  line-height: 44px;
+  margin-left: 20px;
+  font-size: 1.6rem;
+  min-width: 90px;
+  text-align: right;
+}
+#managementbus > div > ol li > div:first-child {
+  background-color: #245269;
+}
+#managementbus > div > ol li > div:first-child label {
+  color: white;
+}
+#managementbus > div > ol li > div:first-child input {
+  background-color: #245269;
+  border: none;
+  text-indent: 10px;
+  font-weight: bold;
+  color: white;
+  font-size: 1.6rem;
+}
+#managementbus > div > ol li > div:last-child {
+  margin-top: 20px;
+}
+#managementbus > div > ol li > div:last-child button {
+  width: 20%;
+  margin-left: 20%;
 }
 .footer {
   bottom: 0;

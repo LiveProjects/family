@@ -1,8 +1,9 @@
 <?php
 require '../dbaccess.php';
 header ( 'content-type:text/html;charset=utf-8' );
-$openid = "0002";
+$openid = "0001";
 $db = new DB ();
+/*提报时间FBooktime*/
 // 记录本周的起始日期
 $currentdate = strtotime ( date ( 'Y-m-d', time () ) );
 $currentweek = date ( 'w', time () );

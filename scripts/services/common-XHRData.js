@@ -83,14 +83,15 @@ angular.module('Hisense')
             })
         };
         /*预约查看*/
-        commonDatas.getcheckMan= function (successcallback, errorcallback) {
+        commonDatas.getcheckMan= function (/*val,username*/successcallback, errorcallback) {
             $http({
                 method:'POST',
                 url:'PHPInterface/Passive/checkBus.php',
                 data:{'firstname':'lio'},
                 headers: {
                     'Content-Type':'application/x-www-form-urlencoded'
-                }
+                },
+                params:{}
             }).success(function(data,status,headers,config){
                 /*var oo=JSON.stringify(data);
                  console.log(oo);*/
@@ -146,8 +147,8 @@ angular.module('Hisense')
                 data:{},
                 params:{
                     'name_employee':val[0],
-                    'FRTime':val[1],
-                    'FRDate':val[2],
+                    'FRTime':val[2],
+                    'FRDate':val[1],
                     'FStop':val[3]
                 },
                 headers:{
@@ -176,7 +177,6 @@ angular.module('Hisense')
                 errorcallback(data);
             })
         };
-
 
         return commonDatas;
 

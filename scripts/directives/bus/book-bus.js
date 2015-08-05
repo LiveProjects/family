@@ -258,12 +258,6 @@ angular.module('Hisense')
 
 
 
-
-
-
-
-
-
                 document.getElementById("bookbus").style.height=window.innerHeight-50+"px";
 
             }
