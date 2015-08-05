@@ -21,6 +21,118 @@
   text-align: center;
   line-height: 140px;
 }
+#loginBox {
+  width: 440px;
+  height: auto;
+  background-color: #60c0c5;
+  border-radius: 2px;
+  position: fixed;
+  min-height: 480px;
+  box-shadow: 3px 3px 5px 4px #a6e1ec;
+  display: none;
+  border-radius: 8px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  margin-top: 80px;
+  z-index: 10000;
+}
+#loginBox > span {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #a94442;
+  top: -20px;
+  right: -20px;
+  -webkit-transition: ease-out 0.3s;
+  -moz-transition: ease-out 0.3s;
+  -ms-transition: ease-out 0.3s;
+  -o-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+  cursor: pointer;
+}
+#loginBox > span:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+}
+#loginBox > div {
+  width: 100%;
+  height: 100%;
+}
+#loginBox > div > div {
+  width: 100%;
+  height: 100px;
+  /*&:hover{
+        background-color: #b92c28;
+      }*/
+}
+#loginBox > div > div label {
+  display: block;
+  width: 80%;
+  height: 60px;
+  margin: 10px auto;
+  position: relative;
+  -webkit-transition: ease-in 0.24s;
+  -moz-transition: ease-in 0.24s;
+  -ms-transition: ease-in 0.24s;
+  -o-transition: ease-in 0.24s;
+  transition: ease-in 0.24s;
+}
+#loginBox > div > div label input {
+  width: 100%;
+  height: 100%;
+  text-indent: 120px;
+  font-size: 1.8rem;
+  -webkit-transition: ease-in 0.24s;
+  -moz-transition: ease-in 0.24s;
+  -ms-transition: ease-in 0.24s;
+  -o-transition: ease-in 0.24s;
+  transition: ease-in 0.24s;
+}
+#loginBox > div > div label span {
+  display: block;
+  min-width: 100px ;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 2rem;
+  -webkit-transition: ease-in 0.24s;
+  -moz-transition: ease-in 0.24s;
+  -ms-transition: ease-in 0.24s;
+  -o-transition: ease-in 0.24s;
+  transition: ease-in 0.24s;
+}
+#loginBox > div > div b {
+  height: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+  display: block;
+  width: 300px;
+}
+#loginBox > div > div b button {
+  min-width: 100px;
+  height: 40px;
+  margin-left: 24px;
+}
+#loginBox > div > div:first-child {
+  width: 100%;
+  height: 120px;
+  margin-top: 20px;
+}
+#loginBox > div > div:first-child img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
 #main-left-cul {
   width: 100%;
   height: 140px;
@@ -395,6 +507,80 @@
 #managementbus > div > ol li > div:last-child button {
   width: 20%;
   margin-left: 20%;
+}
+#manage-left ul {
+  background-color: #60c0c5;
+  margin: 0;
+}
+#manage-left ul li {
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.8rem;
+}
+#manage-left ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+#manage-right {
+  padding-top: 0;
+  height: 100%;
+  background-color: #a94442;
+}
+#manageBusblock {
+  padding-top: 0;
+  width: 100%;
+  min-height: 500px;
+}
+#manageBusblock h2 {
+  height: 80px;
+  text-align: center;
+  background-color: #60c0c5;
+  color: white;
+  font-weight: bolder;
+  padding: 0;
+  line-height: 80px;
+  margin-top: 0;
+  display: none;
+}
+#manageBusblock > div {
+  width: 100%;
+  position: relative;
+}
+#manageBusblock > div > span {
+  display: block;
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+}
+#manageBusblock > div > span button {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+  float: left;
+  font-size: 2rem;
+}
+#manageBusblock > div > ul,
+#manageBusblock > div ol {
+  width: 100%;
+  position: absolute;
+  top: 60px;
+}
+#manageBusblock > div > ul li,
+#manageBusblock > div ol li {
+  list-style: none;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: #444444;
+}
+#manageBusblock > div ol {
+  display: none;
 }
 .footer {
   bottom: 0;

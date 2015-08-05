@@ -19,8 +19,10 @@ app.config(['$routeProvider',function($routeProvider){
         }).when('/managebus',{
             templateUrl:'views/managebus.html',
             controller:'busCtrl'
-        });
-        /*.otherwise({
+        }).when('/manage',{
+            templateUrl:'views/manage.html',
+            controller:'manageCtrl'
+        }).otherwise({
             redirection:'/'
-        })*/
+        })
 }]);
