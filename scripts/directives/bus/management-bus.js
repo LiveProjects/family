@@ -12,7 +12,7 @@ angular.module('Hisense')
             templateUrl:'views/directives/bus/management-bus.html',
             link:function(scope,ele,attr){
                 scope.intro="班车管理";
-                //document.getElementById("managementbus").style.minHeight=window.innerHeight-50+"px";
+                document.getElementById("managementbus").style.minHeight=window.innerHeight-50+"px";
 
                 /*console.log("-----班车管理------");
                 console.log(scope.case);

@@ -18,14 +18,14 @@ angular.module('Hisense')
                 console.log("------------");*/
 
                 /*获取工厂名*/
-                if(localStorage.getItem('bookbusfactory')){
+                /*if(localStorage.getItem('bookbusfactory')){
                     scope.facval=localStorage.getItem('bookbusfactory');
-                }
+                }*/
                 ele.find("div#1").find("input").blur(function(){
                     var val=$(this).val();
                     commonDatas.getfactoryhttp(val,function(data){
                         scope.facval=data[0]['FName'];
-                        localStorage.setItem('bookbusfactory',data[0]['FName']);
+                        //localStorage.setItem('bookbusfactory',data[0]['FName']);
                     });
                 });
 
